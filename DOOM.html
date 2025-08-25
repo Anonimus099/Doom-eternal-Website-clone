@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOOM Eternal | Clone</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="icon"
+      href="./img/favicon/DOOM-faviron.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- font's -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <!-- font's -->
+
+    <script defer src="./js/index.js"></script>
+  </head>
+  <body class="overflow-visible">
+    <header
+      class="header bg-[rgba(29,29,29,0.75)] text-white font-semibold fixed w-full z-50"
+      id="scrollMenu"
+    >
+      <div class="max-w-screen-[1440px] mx-auto px-9">
+        <div class="header__nav flex items-center justify-between">
+          <div class="left__nav flex items-center gap-x-8 h-[60px]">
+            <div
+              id="burgerMenu"
+              class="burger__menu block cursor-pointer hover:opacity-70 duration-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </div>
+              <div
+               id="sidebarMenu"
+               class="sidebar absolute z-50 text-start top-0 left-0 h-screen w-[48.5%] pt-6 px-6 max-lg:w-full max-sm:px-4 transform -translate-x-full transition-transform duration-500 ease-in-out"
+             >
+              <div class="">
+                <div id="closeMenu" class="close__menu absolute top-6 bottom-4 left-6 cursor-pointer hidden" style="right: 20px;">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="sidebarMenu-up flex flex-col sm:flex-row items-center justify-between px-8 pt-8 h-auto min-h-[80px] mb-5 gap-4"
+                >
+                  <div
+                    class="sidebar_bnet_logo hover:opacity-80 cursor-pointer duration-300 ease-linear flex-shrink-0"
+                  >
+                    <svg
+                      class="w-[176px] h-[48px] max-w-full"
+                      viewBox="0 0 316.5 47.07"
+                      aria-label="Bethesda Logo"
+                      style="fill: rgb(25, 25, 25)"
+                    >
+                      <g>
+                        <path
+                          d="M0,20.16h19.77V0H0v20.16ZM6.96,7.1h5.84v5.96h-5.84v-5.96Z"
+                        ></path>
+                        <path
+                          d="M61.9,20.67c3.43-1.87,5.69-4.4,5.69-9.05S65.01.05,52.85.05h-25.29v46.17h26.19c8.15,0,16.17-4.79,16.17-14.04,0-6.79-3.88-10.09-8.02-11.51ZM41.78,11.04h7.5c2.91,0,4.85.84,4.85,3.17,0,2.97-1.87,3.82-4.85,3.82h-7.5v-6.99h0ZM50.13,35.23h-8.35v-8.61h8.93c3.36,0,4.98,1.48,4.98,4.21,0,3.55-2.58,4.4-5.56,4.4Z"
+                        ></path>
+                        <path
+                          d="M124.11,2.44h-12.8v10.22h-5.69v7.6c-2.83-5.47-8.22-8.44-16.63-8.44-10.61,0-17.72,7.96-17.72,17.72,0,11.19,8.09,17.53,18.82,17.53,7.62,0,14.68-3.36,17.26-10.61h-11.96c-1.04,1.62-3.3,2.39-5.37,2.39-4,0-6.2-2.72-6.53-6.53h24.57c0-4.68-.75-8.62-2.31-11.77h5.56v16.04c0,9.18,6.02,10.02,11.45,10.02,2.71,0,5.63-.39,8.21-.39v-9.71c-.97.14-1.94.2-2.91.2-3.23,0-3.95-1.36-3.95-4.46v-11.71h6.86v-7.89h-6.86V2.43h0ZM83.55,25.65c.59-3.62,2.78-5.62,6.6-5.62,3.3,0,5.62,2.52,5.62,5.62h-12.23,0Z"
+                        ></path>
+                        <path
+                          d="M156.5,11.81c-5.43,0-8.28,1.88-10.48,4.46h-.12V.04h-12.8v46.17h12.8v-17.72c0-5.37,2.91-6.47,5.11-6.47,3.75,0,4.2,2.72,4.2,6.6v17.59h12.81v-23.03c0-7.7-5.5-11.38-11.52-11.38h0Z"
+                        ></path>
+                        <path
+                          d="M188.06,38.85c-4,0-6.21-2.72-6.53-6.53h24.57c0-13.06-5.75-20.5-19.08-20.5-10.61,0-17.72,7.96-17.72,17.72,0,11.19,8.09,17.53,18.83,17.53,7.62,0,14.68-3.98,17.26-11.22h-11.96c-1.03,1.62-3.3,3-5.37,3h0ZM188.2,20.03c3.3,0,5.62,2.52,5.62,5.62h-12.22c.58-3.62,2.79-5.62,6.6-5.62Z"
+                        ></path>
+                        <path
+                          d="M231.22,25.85c-4.27-1.42-9.12-1.68-11.25-2.59-.71-.32-1.48-.77-1.48-1.75,0-2.2,2.07-2.58,3.88-2.58,1.04,0,2.07.32,2.84.97.85.58,1.43,1.42,1.5,2.52h11.63c-.32-8.6-9.05-10.61-16.29-10.61-6.73,0-15.85,2.2-15.85,10.67,0,5.75,3.95,8.86,13.71,10.54,5.95,1.04,7.05,1.62,7.05,3.56s-2.65,2.59-4.33,2.59c-1.55,0-2.78-.39-3.43-.97-.97-.84-1.48-1.19-1.55-2.36h-12.23c.19,8.67,8.86,11.22,16.74,11.22s17.08-2.52,17.08-11.84c0-5.5-3.75-8.02-8.02-9.38h0Z"
+                        ></path>
+                        <path
+                          d="M263.29,16.34h-.13c-1.94-2.85-5.37-4.53-9.18-4.53-11.25,0-14.29,9.57-14.29,17.46,0,8.41,4.59,17.79,14.1,17.79,6.27,0,8.21-2.39,9.83-4.54h.13v3.69h12.35V.04h-12.8v16.29h-.01ZM258.12,37.75c-4.59,0-5.63-4.34-5.63-8.34s1.04-8.28,5.63-8.28,5.62,4.34,5.62,8.28-1.04,8.34-5.62,8.34Z"
+                        ></path>
+                        <path
+                          d="M312.19,24.94c0-6.46.12-13.13-15.92-13.13-7.95,0-16.88,1.55-17.26,10.99h11.89c.07-1.42.85-3.43,4.79-3.43,2.08,0,4.21.84,4.21,3.11,0,2.14-1.75,2.65-3.49,2.98-6.54,1.23-18.95.84-18.95,11.45,0,7.05,5.36,10.15,11.83,10.15,4.14,0,8.08-.91,10.8-4.01h.13c-.07.91.12,2.27.45,3.17h13.06c-1.43-2.13-1.55-4.98-1.55-7.5v-13.77h.01ZM299.9,34.26c-.2,3.49-2.45,5.23-5.37,5.23-2.32,0-4.01-1.55-4.01-3.09,0-2.27,1.49-2.98,4.33-3.62,1.75-.39,3.5-.84,5.05-1.62v3.11h0Z"
+                        ></path>
+                        <g>
+                          <path
+                            d="M309.19,4.46h-1.55v-.52h3.71v.52h-1.55v4.12h-.62v-4.12h0Z"
+                          ></path>
+                          <path
+                            d="M311.88,3.94h.85l1.46,3.9,1.47-3.9h.84v4.64h-.58v-3.86h-.01l-1.45,3.86h-.53l-1.45-3.86h-.01v3.86h-.59V3.94h0Z"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    class="sidebarSocial flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-x-6"
+                  >
+                    <a href="#" class="facebook hover:opacity-80 transition-opacity">
+                      <i class="bx bxl-facebook-square text-2xl sm:text-3xl"></i>
+                    </a>
+                    <a href="#" class="twitter hover:opacity-80 transition-opacity">
+                      <i class="bx bxl-twitter text-2xl sm:text-3xl"></i>
+                    </a>
+                    <a href="#" class="youtube hover:opacity-80 transition-opacity">
+                      <i class="bx bxl-youtube text-2xl sm:text-3xl"></i>
+                    </a>
+                    <a href="#" class="instagram hover:opacity-80 transition-opacity">
+                      <i class="bx bxl-instagram text-2xl sm:text-3xl"></i>
+                    </a>
+                    <a href="#" class="discord hover:opacity-80 transition-opacity">
+                      <i class="bx bxl-discord text-2xl sm:text-3xl"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+                             <div class="gridSideBarMenu flex justify-center">
+                 <div
+                   class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 sm:gap-x-16 gap-y-8 max-sm:py-[24px] max-sm:px-[20px]"
+                 >
+                  <div class="row uppercase mb-7 font-montserrat text-gray-800">
+                    Games
+                    <div
+                      class="column mt-4 flex flex-col gap-y-3 capitalize text-black font-normal opacity-60"
+                    >
+                      <a href="#">Indiana Jones and the Great Circle</a>
+                      <a href="#"> DOOM: The Dark Ages</a>
+                      <a href="#">Starfield</a>
+                      <a href="#">Fallout 76</a>
+                      <a href="#">The Elder Scrolls Online</a>
+                      <a href="#">DOOM + DOOM II</a>
+                      <a href="#">Hi-Fi RUSH</a>
+                      <a href="#">The Elder Scrolls V: Skyrim Anniversary</a>
+                      <a href="#">Edition</a>
+                      <a href="#">All Games</a>
+                    </div>
+                  </div>
+                  <div class="row uppercase font-montserrat text-gray-800">
+                    Community
+                    <div
+                      class="column mt-4 flex flex-col gap-y-2 capitalize text-black font-normal opacity-60"
+                    >
+                      <a href="#">Community Hub</a>
+                      <a href="#">DOOM Slayers Club</a>
+                      <a href="#">QuakeCon</a>
+                    </div>
+                    <div
+                      class="row uppercase mt-6 font-montserrat text-gray-800"
+                    >
+                      News
+                      <div
+                        class="column flex mt-4 flex-col gap-y-2 capitalize text-black font-normal opacity-60"
+                      >
+                        <a href="#">Latest News</a>
+                      </div>
+                    </div>
+                    <div
+                      class="row uppercase mt-6 font-montserrat text-gray-800"
+                    >
+                      Shop
+                      <div
+                        class="column flex mt-4 flex-col gap-y-2 capitalize text-black font-normal opacity-60"
+                      >
+                        <a href="#">Bethesda Promotions</a>
+                        <a href="#">Merchandise</a>
+                        <a href="#">Redeem Code</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row uppercase font-montserrat text-gray-800">
+                    Creators & Mods
+                    <div
+                      class="column mt-4 flex flex-col gap-y-2 capitalize text-black font-normal opacity-60"
+                    >
+                      <a href="#">Fallout 4</a>
+                      <a href="#">Skyrim Special Edition</a>
+                      <a href="#">Starfield</a>
+                      <a href="#">DOOM + DOOM II</a>
+                      <a href="#">Doom Eternal</a>
+                    </div>
+                  </div>
+                  <div class="row uppercase font-montserrat text-gray-800">
+                    Support
+                    <div
+                      class="column flex mt-4 flex-col gap-y-2 text-black capitalize font-normal opacity-60"
+                    >
+                      <a href="#">Service Status</a>
+                      <a href="#">Help Site</a>
+                      <a href="#">Game Manuals</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bethesda__logo hover:opacity-70 duration-100 text-white font-bold text-xl"
+            >
+              <a href="#">
+                <svg
+                  class="w-[92px] h-auto"
+                  viewBox="0 0 316.5 47.07"
+                  aria-label="Bethesda Logo"
+                  style="fill: rgb(255, 255, 255)"
+                >
+                  <g>
+                    <path
+                      d="M0,20.16h19.77V0H0v20.16ZM6.96,7.1h5.84v5.96h-5.84v-5.96Z"
+                    ></path>
+                    <path
+                      d="M61.9,20.67c3.43-1.87,5.69-4.4,5.69-9.05S65.01.05,52.85.05h-25.29v46.17h26.19c8.15,0,16.17-4.79,16.17-14.04,0-6.79-3.88-10.09-8.02-11.51ZM41.78,11.04h7.5c2.91,0,4.85.84,4.85,3.17,0,2.97-1.87,3.82-4.85,3.82h-7.5v-6.99h0ZM50.13,35.23h-8.35v-8.61h8.93c3.36,0,4.98,1.48,4.98,4.21,0,3.55-2.58,4.4-5.56,4.4Z"
+                    ></path>
+                    <path
+                      d="M124.11,2.44h-12.8v10.22h-5.69v7.6c-2.83-5.47-8.22-8.44-16.63-8.44-10.61,0-17.72,7.96-17.72,17.72,0,11.19,8.09,17.53,18.82,17.53,7.62,0,14.68-3.36,17.26-10.61h-11.96c-1.04,1.62-3.3,2.39-5.37,2.39-4,0-6.2-2.72-6.53-6.53h24.57c0-4.68-.75-8.62-2.31-11.77h5.56v16.04c0,9.18,6.02,10.02,11.45,10.02,2.71,0,5.63-.39,8.21-.39v-9.71c-.97.14-1.94.2-2.91.2-3.23,0-3.95-1.36-3.95-4.46v-11.71h6.86v-7.89h-6.86V2.43h0ZM83.55,25.65c.59-3.62,2.78-5.62,6.6-5.62,3.3,0,5.62,2.52,5.62,5.62h-12.23,0Z"
+                    ></path>
+                    <path
+                      d="M156.5,11.81c-5.43,0-8.28,1.88-10.48,4.46h-.12V.04h-12.8v46.17h12.8v-17.72c0-5.37,2.91-6.47,5.11-6.47,3.75,0,4.2,2.72,4.2,6.6v17.59h12.81v-23.03c0-7.7-5.5-11.38-11.52-11.38h0Z"
+                    ></path>
+                    <path
+                      d="M188.06,38.85c-4,0-6.21-2.72-6.53-6.53h24.57c0-13.06-5.75-20.5-19.08-20.5-10.61,0-17.72,7.96-17.72,17.72,0,11.19,8.09,17.53,18.83,17.53,7.62,0,14.68-3.98,17.26-11.22h-11.96c-1.03,1.62-3.3,3-5.37,3h0ZM188.2,20.03c3.3,0,5.62,2.52,5.62,5.62h-12.22c.58-3.62,2.79-5.62,6.6-5.62Z"
+                    ></path>
+                    <path
+                      d="M231.22,25.85c-4.27-1.42-9.12-1.68-11.25-2.59-.71-.32-1.48-.77-1.48-1.75,0-2.2,2.07-2.58,3.88-2.58,1.04,0,2.07.32,2.84.97.85.58,1.43,1.42,1.5,2.52h11.63c-.32-8.6-9.05-10.61-16.29-10.61-6.73,0-15.85,2.2-15.85,10.67,0,5.75,3.95,8.86,13.71,10.54,5.95,1.04,7.05,1.62,7.05,3.56s-2.65,2.59-4.33,2.59c-1.55,0-2.78-.39-3.43-.97-.97-.84-1.48-1.19-1.55-2.36h-12.23c.19,8.67,8.86,11.22,16.74,11.22s17.08-2.52,17.08-11.84c0-5.5-3.75-8.02-8.02-9.38h0Z"
+                    ></path>
+                    <path
+                      d="M263.29,16.34h-.13c-1.94-2.85-5.37-4.53-9.18-4.53-11.25,0-14.29,9.57-14.29,17.46,0,8.41,4.59,17.79,14.1,17.79,6.27,0,8.21-2.39,9.83-4.54h.13v3.69h12.35V.04h-12.8v16.29h-.01ZM258.12,37.75c-4.59,0-5.63-4.34-5.63-8.34s1.04-8.28,5.63-8.28,5.62,4.34,5.62,8.28-1.04,8.34-5.62,8.34Z"
+                    ></path>
+                    <path
+                      d="M312.19,24.94c0-6.46.12-13.13-15.92-13.13-7.95,0-16.88,1.55-17.26,10.99h11.89c.07-1.42.85-3.43,4.79-3.43,2.08,0,4.21.84,4.21,3.11,0,2.14-1.75,2.65-3.49,2.98-6.54,1.23-18.95.84-18.95,11.45,0,7.05,5.36,10.15,11.83,10.15,4.14,0,8.08-.91,10.8-4.01h.13c-.07.91.12,2.27.45,3.17h13.06c-1.43-2.13-1.55-4.98-1.55-7.5v-13.77h.01ZM299.9,34.26c-.2,3.49-2.45,5.23-5.37,5.23-2.32,0-4.01-1.55-4.01-3.09,0-2.27,1.49-2.98,4.33-3.62,1.75-.39,3.5-.84,5.05-1.62v3.11h0Z"
+                    ></path>
+                    <g>
+                      <path
+                        d="M309.19,4.46h-1.55v-.52h3.71v.52h-1.55v4.12h-.62v-4.12h0Z"
+                      ></path>
+                      <path
+                        d="M311.88,3.94h.85l1.46,3.9,1.47-3.9h.84v4.64h-.58v-3.86h-.01l-1.45,3.86h-.53l-1.45-3.86h-.01v3.86h-.59V3.94h0Z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <div
+              class="h-[26px] w-[0.5px] border border-white max-lg:hidden"
+            ></div>
+            <div class="header__logo">
+              <a href="#" class="logo__item max-lg:hidden">
+                <img
+                  src="//images.ctfassets.net/rporu91m20dc/2zYsvXWUhGi0y0AIKoAeMW/97d9cec4accb9904fb82ad2a65eedb0f/doom-series-logo.png?h=80"
+                  class="w-[47px] h-[25px] hover:opacity-80 duration-300 ease-in-out"
+                  alt="Logo"
+                />
+              </a>
+            </div>
+            <d
+              iv
+              class="left__menu max-lg:hidden flex items-center gap-x-6 font-montserrat"
+            >
+              <ul class="menu flex gap-x-6">
+                <li class="menu__list">
+                  <a
+                    id="menu__navBar"
+                    href="#"
+                    class="menu__link uppercase text-[10px]"
+                    >menu</a
+                  >
+                </li>
+                <li
+                  id="__navBar"
+                  class="menu__list cursor-pointer bottom-0 hover:opacity-80"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
+                    />
+                  </svg>
+                </li>
+                <div
+                  id="menuBarItem"
+                  class="menuBar w-full absolute top-0 left-0 z-50 h-screen bg-[#762C20]/85 pt-14 transform -translate-y-full transition-transform duration-500 ease-in-out"
+                >
+                  <div class="flex flex-col justify-between h-full">
+                    <div class="menuBar__logo flex justify-center">
+                      <div class="DOOM-logo relative mb-9">
+                        <img
+                          src="./img/icons/doom-series-logo.webp"
+                          alt="Doom logo"
+                        />
+                      </div>
+                      <div
+                        id="closeBtn"
+                        class="closeBtn absolute top-6 right-6 cursor-pointer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      class="menuBar__list text-center font-oswald font-medium"
+                    >
+                      <ul class="menu flex flex-col gap-y-[20px] sm:gap-y-[35px] text-[24px] sm:text-[32px] lg:text-[40px]">
+                        <li class="menu__list hover:opacity-80">
+                          <a href="https://slayersclub.bethesda.net/en-US"
+                            >Slayers Club</a
+                          >
+                        </li>
+                        <li class="menu__list hover:opacity-80">
+                          <a
+                            href="https://bethesda.net/en/game/doom-eternal-the-ancient-gods"
+                            >The Ancient Gods - Part One</a
+                          >
+                        </li>
+                        <li class="menu__list hover:opacity-80">
+                          <a
+                            href="https://bethesda.net/en/game/doom-eternal-the-ancient-gods-part-two"
+                            >The Ancient Gods - Part Two</a
+                          >
+                        </li>
+                        <li class="menu__list hover:opacity-80">
+                          <a href="https://gear.bethesda.net/collections/doom"
+                            >Merchandise</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 lg:gap-20 bg-[#00000033] bg-opacity-80 p-6 sm:p-10"
+                    >
+                      <!-- Card 1 -->
+                      <div
+                        class="bg-[#762C20] overflow-hidden w-full max-w-[200px] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.5)] duration-200 ease cursor-pointer hover:-translate-y-[5px]"
+                      >
+                        <img
+                          src="./img/pictures/DOOM_Eternal_menu_box.jpg"
+                          alt="DOOM Eternal"
+                          class="w-full"
+                        />
+                        <div class="p-2 text-center">
+                          <h2 class="text-white text-[10px] font-bold">
+                            DOOM Eternal
+                          </h2>
+                        </div>
+                      </div>
+
+                      <!-- Card 2 -->
+                      <div
+                        class="bg-[#762C20] overflow-hidden w-full max-w-[200px] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.5)] duration-200 ease cursor-pointer hover:-translate-y-[5px]"
+                      >
+                        <img
+                          src="./img/pictures/doom-vfr-box.jpg"
+                          alt="DOOM VFR"
+                          class="w-full"
+                        />
+                        <div class="p-2 text-center">
+                          <h2 class="text-white text-[10px] font-bold">
+                            DOOM VFR
+                          </h2>
+                        </div>
+                      </div>
+
+                      <!-- Card 3 -->
+                      <div
+                        class="bg-[#762C20] overflow-hidden w-full max-w-[200px] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.5)] duration-200 ease cursor-pointer hover:-translate-y-[5px]"
+                      >
+                        <img
+                          src="./img/pictures/doom-2016-box.jpg"
+                          alt="DOOM (2016)"
+                          class="w-full"
+                        />
+                        <div class="p-2 text-center">
+                          <h2 class="text-white text-[10px] font-bold">
+                            DOOM (2016)
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+              <button
+                class="border border-white cursor-pointer rounded-xs h-[33px] w-[133px] hover:opacity-80 duration-200"
+              >
+                <span
+                  class="text-[10.4px] font-montserrat font-semibold uppercase"
+                  >slayers club</span
+                >
+              </button>
+            </d>
+          </div>
+
+          <div
+            class="right__nav flex items-center gap-x-9 max-w-[221px] font-montserrat h-[60px]"
+          >
+            <button
+              class="right__nav-search cursor-pointer hover:opacity-80 duration-200"
+              type="button"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="transparent"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+            <button id="right__nav-btn"
+              class="right__nav-btn max-lg:hidden cursor-pointer uppercase text-xs border border-white rounded-xs px-6 py-[10px] opacity-80 hover:opacity-100 duration-200 font-monsterrat"
+              aria-label="Log in / Sign up" type="button">
+              log in / sign up
+            </button>
+            <a href="#!" class="hidden max-lg:block">
+              <i class="bx bx-log-in text-[25px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      class="main relative bg-cover bg-center bg-no-repeat h-[450px] bg-[url('/img/bg/doom_eternal_bg_mini.webp')] md:bg-[url('/img/bg/doom_eternal_bg.webp')] lg:h-[860px] max-sm:bg-top max-md:h-[90vh]"
+      aria-label="DOOM Eternal | Bethesda.net"
+    >
+      <div
+        class="bnetGame__btn flex px-9 justify-center gap-x-[10px] absolute left-[50%] text-center w-full bottom-[20px] translate-x-[-50%] max-md:px-0"
+      >
+        <button
+          id="openVideoBtn"
+          class="bnetGame__btn-item bg-white opacity-90 cursor-pointer text-black font-bold rounded-xs w-[221px] h-[69px] uppercase px-[10px] py-[10px] hover:text-white hover:bg-[#9f1700] hover:border-[#9f1700] duration-300 ease-linear hover:fill-white hover:opacity-90 shadow-md shadow-[#9f1700]"
+        >
+          <span class="flex items-center gap-x-2 text-sm font-orbitron">
+            <svg
+              class="w-[32px]"
+              focusable="false"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+            accoladers trailer
+          </span>
+        </button>
+        <button
+          class="bnetGame__btn-item bg-white cursor-pointer opacity-90 text-black font-bold rounded-xs w-[204px] h-[69px] uppercase px-[10px] py-[10px] hover:text-white hover:bg-[#9f1700] duration-300 ease-linear hover:border-[#9f1700] hover:opacity-90 shadow-md shadow-[#9f1700]"
+          id="buyNowBtn"
+        >
+          <span class="text-sm"> buy now </span>
+        </button>
+      </div>
+    </main>
+    <section class="bg-black min-h-[100px] flex justify-center items-center">
+      <div class="socials flex text-white gap-x-12 text-[37px]">
+        <a href="https://www.facebook.com/DOOM/" target="_blank">
+          <i
+            class="bx bxl-facebook-square cursor-pointer opacity-70 hover:text-[#9f1700] hover:opacity-100 duration-200"
+          ></i>
+        </a>
+        <a href="https://www.instagram.com/doom/" target="_blank">
+          <i
+            class="bx bxl-instagram cursor-pointer opacity-70 hover:text-[#9f1700] hover:opacity-100 duration-200"
+          ></i>
+        </a>
+        <a href="https://x.com/DOOM" target="_blank">
+          <i
+            class="bx bxl-twitter cursor-pointer opacity-70 hover:text-[#9f1700] hover:opacity-100 duration-200"
+          ></i>
+        </a>
+        <a href="https://www.youtube.com/bethesda" target="_blank">
+          <i
+            class="bx bxl-youtube cursor-pointer opacity-70 hover:text-[#9f1700] hover:opacity-100 duration-200"
+          ></i>
+        </a>
+      </div>
+    </section>
+    <section
+      class="bg-[url('/img/bg/doom-eternal-bg-change.jpg')] bg-cover bg-center bg-no-repeat h-full"
+    >
+      <div class="max-w-screen-[1440px] mx-auto px-9">
+        <div class="section-about-game text-white text-center py-[100px]">
+          <h1
+            class="title text-5xl max-md:text-4xl font-semibold font-orbitron uppercase mb-6"
+          >
+            Raze Hell
+          </h1>
+          <p
+            class="text-xl max-md:text-lg max-md:w-auto max-md:text-wrap font-opensans mb-6 w-[587px] mx-auto"
+          >
+            Hell's armies have invaded Earth. Become the Slayer in an epic
+            single-player campaign to conquer demons across dimensions and stop
+            the final destruction of humanity.
+          </p>
+          <p
+            class="text-xl max-md:text-lg max-md:w-auto max-md:text-wrap font-opensans mb-6 w-[587px] mx-auto"
+          >
+            <strong>The only thing they fear... is you.</strong>
+          </p>
+          <p
+            class="text-xl max-md:text-lg max-md:w-auto max-md:text-wrap font-opensans mb-6 w-[587px] mx-auto"
+          >
+            Experience the ultimate combination of speed and power in DOOM
+            Eternal - the next leap in push-forward, first-person combat.
+          </p>
+          <p
+            class="text-xl max-md:text-lg max-md:w-auto max-md:text-wrap font-opensans w-[587px] mx-auto"
+          >
+            Discover the Slayer's origins and his enduring mission to RAZE HELL.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="sliderBlock"
+      class="sliderBlock flex w-full h-[83vh] mx-auto relative overflow-hidden"
+    >
+      <div class="imgAreas w-full h-full overflow-hidden">
+        <!-- <div class="imgSlider_one h-full"></div> -->
+        <img
+          class="imgSlider hidden items-center object-cover justify-center w-full h-full overflow-hidden"
+          src="./img/pictures/eternal-slide-1.webp"
+          alt="slide one"
+          data-title="SLAYER THREAD LEVEL AT MAXIMUM"
+          data-text="Gain access to the latest demon-killing tech with the DOOM Slayer’s advanced Praetor Suit, including a shoulder-mounted flamethrower and the retractable wrist-mounted DOOM Blade. Upgraded guns and mods, such as the Super Shotgun’s new distance-closing Meat Hook attachment, and abilities like the Double Dash make you faster, stronger, and more versatile than ever."
+        />
+        <img
+          class="imgSlider hidden items-center object-cover justify-center w-full h-full overflow-hidden"
+          src="./img/pictures/eternal-slide-2.webp"
+          alt="slide two"
+          data-title="UNHOLY TRINITY"
+          data-text="You can’t kill demons when you’re dead, and you can’t stay alive without resources. Take what you need from your enemies: Glory kill for extra health, incinerate for armor, and chainsaw demons to stock up on ammo. These tools are the key to your survival and becoming the ultimate demon-slayer."
+        />
+        <img
+          class="imgSlider hidden items-center object-cover justify-center w-full h-full overflow-hidden"
+          src="./img/pictures/eternal-slide-3.webp"
+          alt="slide three"
+          data-title="A New Class of (Destructible) Demon"
+          data-text="Obliterate more demons than ever before, each with unique attacks and abilities. Fan-favorite classics such as the Pain Elemental, Archvile, and Arachnotron make their return, while a horde of totally-new demons join the roster including the DOOM Hunter, Marauder, and the Gladiator. Rip apart your favorite demons to the core with DOOM Eternal’s “destructible demons” system and take your power fantasy to new levels."
+        />
+        <img
+          class="imgSlider hidden items-center object-cover justify-center w-full h-full overflow-hidden"
+          src="./img/pictures/eternal-slide-4.webp"
+          alt="slide four"
+          data-title="Enter BATTLEMODE"
+          data-text="BATTLEMODE is the new 2 versus 1 multiplayer experience built from the ground up at id Software. A fully-armed DOOM Slayer faces off against two player-controlled demons, duking it out over three rounds of intense first-person combat."
+        />
+        <!-- <div class="imgSlider_two h-full"></div> -->
+      </div>
+      <!-- Caption overlay -->
+      <div
+        id="sliderCaption"
+        class="pointer-events-none absolute inset-0 z-10 flex items-center justify-start px-4 md:px-12"
+      >
+        <div class="text-white px-6 py-4 rounded-sm text-left" style="margin-left: 200px;">
+          <h1 id="sliderCaptionTitle" class="font-orbitron font-bold text-5xl md:text-3xl mb-2 uppercase"></h1>
+          <p id="sliderCaptionText" class="font-opensans text-xl md:text-base leading-relaxed overflow-y-auto" style="max-width: 620px;"></p>
+        </div>
+      </div>
+      <div class="sliderNav absolute z-30 flex w-full top-[50%] justify-between">
+        <div
+          id="leftArrow"
+          class="arrowNav cursor-pointer py-3 px-2 hover:opacity-90 text-white"
+          style="background: rgba(51,51,51,0.6);"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-9 w-9"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="3"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </div>
+
+        <div
+          id="rightArrow"
+          class="arrowNav cursor-pointer py-3 px-2 hover:opacity-90 text-white"
+          style="background: rgba(51,51,51,0.6);"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-9 w-9"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="3"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <section
+      class="bg-[url('/img/bg/doom-eternal-section-bg.webp')] bg-cover bg-center bg-no-repeat h-full"
+    >
+      <div
+        id="buyNow"
+        class="max-w-screen-[1440px] mx-auto px-9 py-[100px] max-lg:py-[50px]"
+      >
+        <div
+          class="payDoomComplectGame flex justify-center items-center gap-x-36"
+        >
+          <div class="table-select-game bg-black">
+            <div class="bnetGame">
+              <div
+                class="select-edition border-b-[1px] border-b-zinc-800 flex items-center justify-between p-[20px] max-md:flex-col max-md:items-start max-md:gap-y-2"
+              >
+                <h3 class="uppercase text-white font-roboto">select edition</h3>
+                <div
+                  class="select min-w-[302px] cursor-pointer flex justify-between items-center py-4 px-5 border border-white rounded-sm text-white font-opensans capitalize max-md:min-w-full"
+                >
+                  <span>deluxe edition</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="DoomEternalDeluxeEdition_Description text-white p-[30px] border-b-[1px] border-b-zinc-800"
+              >
+                <div class="md:min-w-[580px] lg:max-w-[486px]">
+                  <h3 class="uppercase font-orbitron font-bold text-3xl mb-4">
+                    DOOM Eternal - Deluxe Edition
+                  </h3>
+                  <div class="mb-4 text-sm font-roboto font-bold">
+                    Hell's armies have invaded Earth. Become the Slayer in an
+                    epic single-player campaign to conquer demons across
+                    dimensions and stop the final destruction of humanity. The
+                    only thing they fear... is you.
+                  </div>
+                  <div class="mb-4 text-sm font-roboto font-bold">
+                    The Deluxe Edition includes:
+                  </div>
+                  <div class="font-roboto text-sm font-bold pl-10">
+                    <ul class="list-disc">
+                      <li>
+                        Year One Pass: Access to two campaign expansions - The
+                        Ancient Gods - Part One and Part Two - for the
+                        critically acclaimed DOOM Eternal.
+                      </li>
+                      <li>Demonic Slayer Skin</li>
+                      <li>Classic Weapon Sound Pack</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="buyDigital p-[30px] border-b-[1px] border-b-zinc-800">
+                <h3
+                  class="text-white uppercase font-orbitron font-bold text-[22px] mb-2"
+                >
+                  Buy Digital
+                </h3>
+                <div
+                  class="md:grid md:grid-rows-2 md:grid-cols-2 md:gap-4 max-md:gap-y-4 max-md:flex max-md:flex-col"
+                >
+                  <a
+                    href="https://www.xbox.com/de-de/games/store/doom-eternal-deluxe-edition/9mw61sw6h24j"
+                    class="uppercase hover:opacity-80 h-[60px] text-[13px] items-center flex justify-center gap-x-3 text-white py-3 px-9 text-center font-semibold font-orbitron border border-[#0E7A0D] rounded-sm bg-[#0E7A0D]"
+                  >
+                    <svg
+                      class="bnetGame-MuiSvgIcon-root bnetGame-bnetGame55947 fill-white"
+                      focusable="false"
+                      viewBox="0 0 39.7 39.7"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="25"
+                      height="25"
+                    >
+                      <title>Xbox</title>
+                      <path
+                        d="M25.4,11.2c-0.1,0.1-0.2,0.3-0.2,0.4c2.6,3.2,11,13.5,10.2,20.6c2.7-3.4,4.3-7.6,4.3-12.3 c0-5.7-2.4-10.8-6.3-14.4C30.2,6.1,27.1,8.9,25.4,11.2"
+                      ></path>
+                      <path
+                        d="M9.4,3c4.2-0.1,8.1,1.8,10.4,3.3C22.1,4.8,26,2.9,30.2,3l0,0c-3-1.9-6.6-3-10.4-3C16,0.1,12.4,1.2,9.4,3L9.4,3"
+                      ></path>
+                      <path
+                        d="M14.5,11.6c-0.1-0.1-0.1-0.3-0.2-0.4c-1.7-2.3-4.9-5.1-8-5.7C2.4,9.1,0,14.2,0,19.9c0,4.6,1.6,8.9,4.3,12.2 C3.5,25,11.9,14.7,14.5,11.6"
+                      ></path>
+                      <path
+                        d="M22,18L22,18c-0.7-0.6-1.4-1.2-2.2-1.8c-0.8,0.6-1.5,1.2-2.2,1.8l0,0C12.5,22.5,6,28.6,6,34.2 c3.6,3.4,8.4,5.5,13.7,5.5s10.2-2.1,13.7-5.5C33.6,28.6,27.1,22.6,22,18"
+                      ></path>
+                    </svg>
+                    <span>Xbox One</span>
+                  </a>
+                  <a
+                    href="https://store.playstation.com/en-us/product/UP1003-CUSA13338_00-DOOMETERNALDELUX/"
+                    class="uppercase h-[60px] text-[13px] hover:opacity-80 flex items-center justify-center gap-x-3 text-white py-3 px-9 text-center font-semibold font-orbitron border border-[#193285] rounded-sm bg-[#193285]"
+                  >
+                    <svg
+                      class="bnetGame-MuiSvgIcon-root bnetGame-bnetGame65427 fill-white"
+                      focusable="false"
+                      viewBox="0 0 45.7 34.5"
+                      aria-hidden="true
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="25"
+                      height="25"
+                    >
+                      <title>PlayStation</title>
+                      <path
+                        d="M17,0c2,0.4,3.9,0.9,5.9,1.4c1.1,0.3,2.2,0.6,3.3,1c1.7,0.5,3.5,1.1,5,2.1c0.7,0.4,1.4,0.9,2,1.5 s1.1,1.3,1.5,2.1c0.7,1.4,0.9,2.9,1,4.5c0,1,0,2-0.2,3c-0.2,0.9-0.4,1.7-0.9,2.4c-0.4,0.7-1,1.2-1.7,1.6c-0.7,0.4-1.4,0.5-2.2,0.5 c-1.2,0-2.3-0.3-3.3-0.8c0-3.4,0-6.7,0-10.1c0-0.6,0-1.2-0.1-1.8c-0.1-0.5-0.3-0.9-0.7-1.2C26.4,6,26,5.9,25.7,5.8 c-0.3-0.1-0.7,0.1-0.9,0.3c-0.3,0.4-0.4,1-0.4,1.5c0,9,0,18,0,26.9c-2.5-0.8-5-1.5-7.5-2.3C17,21.4,17,10.7,17,0"
+                      ></path>
+                      <path
+                        d="M5.9,22.8c3.2-1.1,6.5-2.2,9.7-3.4c0,1.2,0,2.5,0,3.7c0,0.2,0,0.3,0,0.5c-2.6,0.9-5.1,1.8-7.7,2.7 c-0.4,0.1-0.7,0.3-1,0.5c-0.1,0.1-0.2,0.3-0.2,0.5c0.1,0.2,0.3,0.3,0.5,0.4C7.8,27.9,8.4,28,9,28c0.7,0,1.3-0.1,2-0.2 c0.4-0.1,0.9-0.2,1.3-0.4c1.1-0.4,2.2-0.8,3.3-1.2c0,1,0,2.1,0,3.1c0,0.2,0,0.4,0,0.6c-1.3,0.2-2.7,0.4-4.1,0.4 c-2.8,0.1-5.5-0.4-8.1-1.2C2.5,28.9,1.7,28.5,1,28c-0.4-0.3-0.7-0.7-0.9-1.1c-0.2-0.4-0.1-0.8,0-1.2c0.2-0.4,0.5-0.7,0.8-0.9 c0.8-0.5,1.7-1,2.6-1.3C4.3,23.3,5.1,23,5.9,22.8"
+                      ></path>
+                      <path
+                        d="M31.9,21.3c0.7-0.1,1.5-0.1,2.2-0.1c2.4,0,4.9,0.3,7.2,1c0.5,0.1,0.9,0.3,1.4,0.5c0.8,0.3,1.6,0.6,2.3,1.2 c0.4,0.3,0.7,0.8,0.7,1.3c0,0.4-0.2,0.8-0.5,1.2c-0.5,0.6-1.3,1-2,1.4c-0.8,0.4-1.6,0.6-2.4,0.9c-5,1.7-9.9,3.5-14.9,5.2 c0-1.4,0-2.7,0-4.1c0-0.1,0-0.1,0.1-0.2c3.8-1.3,7.6-2.6,11.3-3.9c0.5-0.2,1.1-0.3,1.5-0.7c0.2-0.1,0.4-0.4,0.3-0.6 c-0.1-0.2-0.3-0.3-0.5-0.4c-0.6-0.2-1.2-0.3-1.8-0.3c-0.9,0-1.9,0.1-2.8,0.4c-2.7,0.9-5.4,1.8-8.1,2.8c0-1.5,0-2.9,0-4.4 C27.8,22,29.9,21.6,31.9,21.3"
+                      ></path>
+                    </svg>
+                    <span>PlayStation®4</span>
+                  </a>
+                  <a
+                    href="https://www.nintendo.com/us/store/products/doom-eternal-deluxe-edition-switch/"
+                    class="uppercase h-[60px] text-[13px] hover:opacity-80 flex gap-x-3 justify-center items-center text-white py-3 px-9 text-center font-medium font-orbitron border border-[#E60012] rounded-sm bg-[#E60012]"
+                  >
+                    <svg
+                      class="bnetGame-MuiSvgIcon-root bnetGame-bnetGame68587 fill-white"
+                      focusable="false"
+                      viewBox="0 0 208.498 208.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="25"
+                      height="25"
+                    >
+                      <title>Nintendo Switch</title>
+                      <g
+                        inkscapegroupmode="layer"
+                        transform="matrix(1.3333333,0,0,-1.3333333,-419.00319,587.32505)"
+                      >
+                        <g>
+                          <g>
+                            <g transform="translate(338.5967,393.5815)">
+                              <path
+                                d="m 0,0 c 0,-8.121 6.583,-14.702 14.702,-14.702 8.121,0 14.703,6.581 14.703,14.702 0,8.12 -6.582,14.702 -14.703,14.702 C 6.583,14.702 0,8.12 0,0"
+                              ></path>
+                            </g>
+                            <g transform="translate(377.0674,296.7256)">
+                              <path
+                                d="m 0,0 h -22.72 c -7.344,0 -14.247,2.858 -19.437,8.05 -5.193,5.19 -8.051,12.093 -8.051,19.439 v 76.181 c 0,7.348 2.858,14.25 8.049,19.438 5.191,5.193 12.095,8.053 19.439,8.053 H 0 Z M 11.459,143.768 H -22.72 c -22.144,0 -40.095,-17.953 -40.095,-40.096 V 27.49 c 0,-22.145 17.951,-40.096 40.095,-40.096 h 34.179 c 0.635,0 1.147,0.513 1.147,1.146 v 154.083 c 0,0.632 -0.512,1.145 -1.147,1.145"
+                                style="
+                                  fill-opacity: 1;
+                                  fill-rule: nonzero;
+                                  stroke: none;
+                                "
+                              ></path>
+                            </g>
+                            <g transform="translate(436.2559,338.6768)">
+                              <path
+                                d="m 0,0 c -8.731,0 -15.811,7.079 -15.811,15.811 0,8.731 7.08,15.81 15.811,15.81 8.731,0 15.811,-7.079 15.811,-15.81 C 15.811,7.079 8.731,0 0,0 m -5.727,101.817 h -24.191 c -0.562,0 -1.019,-0.455 -1.019,-1.019 V -53.411 c 0,-0.633 0.513,-1.147 1.146,-1.147 h 24.064 c 22.145,0 40.097,17.952 40.097,40.097 v 76.182 c 0,22.143 -17.952,40.096 -40.097,40.096"
+                                style="
+                                  fill-opacity: 1;
+                                  fill-rule: nonzero;
+                                  stroke: none;
+                                "
+                              ></path>
+                            </g>
+                            <g transform="translate(-54.750001,90.750002)">
+                              <g transform="translate(511.8252,200.0605)">
+                                <path
+                                  d="M 0,0 H -2.457 V 1.318 H 3.946 V 0 H 1.5 V -6.132 H 0 Z"
+                                  style="
+                                    fill-opacity: 1;
+                                    fill-rule: nonzero;
+                                    stroke: none;
+                                  "
+                                ></path>
+                              </g>
+                              <g transform="translate(516.8945,193.9287)">
+                                <path
+                                  d="M 0,0 V 7.45 H 2.026 L 3.939,2.104 5.82,7.45 H 7.855 V 0 H 6.464 L 6.467,5.971 4.423,0 H 3.437 L 1.384,5.971 1.381,0 Z"
+                                  style="
+                                    fill-opacity: 1;
+                                    fill-rule: nonzero;
+                                    stroke: none;
+                                  "
+                                ></path>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    <span>Nintendo Switch</span>
+                  </a>
+                  <a
+                    href="https://store.steampowered.com/agecheck/app/782330/"
+                    class="uppercase h-[60px] text-[13px] hover:opacity-80 flex gap-x-3 items-center justify-center text-white py-3 px-9 text-center font-semibold font-orbitron border border-[#007EAD] rounded-sm bg-[#007EAD]"
+                  >
+                    <svg
+                      class="bnetGame-MuiSvgIcon-root bnetGame-bnetGame71747 fill-white"
+                      focusable="false"
+                      viewBox="0 0 42.3 39.2"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="25"
+                      height="25"
+                      ariahidden="true"
+                    >
+                      <title>Steam</title>
+                      <path
+                        d="M21.1,0C10,0,0.9,7.9,0,18l11.4,4.3c1-0.6,2.1-1,3.4-1c0.1,0,0.2,0,0.3,0l5-6.7v-0.1c0-4.1,3.6-7.4,8-7.4 s8,3.3,8,7.4s-3.6,7.4-8,7.4c-0.1,0-0.1,0-0.2,0l-7.2,4.8c0,0.1,0,0.2,0,0.3c0,3.1-2.7,5.6-6,5.6c-2.9,0-5.3-1.9-5.9-4.5L0.7,25 c2.5,8.2,10.7,14.2,20.4,14.2c11.7,0,21.2-8.8,21.2-19.6S32.8,0,21.1,0"
+                      ></path>
+                      <path
+                        d="M13.2,29.7l-2.6-1c0.5,0.9,1.3,1.6,2.3,2c2.3,0.9,4.9-0.1,5.9-2.2c0.5-1,0.5-2.2,0-3.2s-1.3-1.8-2.4-2.3 c-1.1-0.4-2.3-0.4-3.3,0l2.7,1c1.7,0.7,2.5,2.4,1.8,4C16.9,29.7,14.9,30.4,13.2,29.7"
+                      ></path>
+                      <path
+                        d="M33.4,14.5c0-2.7-2.4-4.9-5.3-4.9s-5.3,2.2-5.3,4.9s2.4,4.9,5.3,4.9C31,19.5,33.4,17.3,33.4,14.5 M24.1,14.5 c0-2,1.8-3.7,4-3.7s4,1.7,4,3.7s-1.8,3.7-4,3.7S24.1,16.6,24.1,14.5"
+                      ></path>
+                    </svg>
+                    <span>Steam (pc)</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="whereToBuy p-[30px] flex flex-col gap-y-3">
+                <div
+                  class="uppercase font-orbitron font-bold text-[22px] text-white mb-2"
+                >
+                  where to buy
+                </div>
+                <div
+                  class="select cursor-pointer min-w-[302px] flex justify-between items-center py-4 px-5 border border-white rounded-sm text-white font-opensans capitalize"
+                >
+                  <span>Select Your Region</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="select min-w-[302px] cursor-pointer flex justify-between items-center py-4 px-5 border border-white rounded-sm text-white font-opensans capitalize"
+                >
+                  <span>Select Retail</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="select min-w-[302px] cursor-pointer flex justify-between items-center py-4 px-5 border border-white rounded-sm text-white font-opensans capitalize"
+                >
+                  <span>Preferred Platforms</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="select min-w-[302px] hover:text-[#9f1700] hover:bg-white cursor-pointer text-center py-5 px-5 border text-xs border-[#9f1700] bg-[#9f1700] text-white font-orbitron font-bold uppercase"
+                >
+                  <span>buy now</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="payDoomComplectEditionImg hidden lg:block min-w-[500px]">
+            <img
+              src="./img/pictures/DOOM_Eternal_Deluxe_Preorder_.jpg"
+              alt="DOOM Eternal Deluxe Edition Vanity"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section
+    id="slider"
+    class="splide h-96"
+    aria-label="Splide Basic HTML Example"
+  >
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide bg-blue-950 text-white h-96">Slide 01</li>
+        <li class="splide__slide bg-green-950 text-white h-96">Slide 02</li>
+        <li class="splide__slide bg-red-950 text-white h-96">Slide 03</li>
+      </ul>
+    </div>
+  </section> -->
+
+    <footer class="footer">
+      <div
+        class="langChange-footer flex items-center justify-center p-5 bg-[#242424]"
+      >
+        <a
+          href="#"
+          class="lang__btn_change flex items-center gap-x-3 border border-white py-3 px-[30px] uppercase font-montserrat font-semibold text-xs rounded-sm bg-black text-white fill-white"
+        >
+          <svg
+            class="w-[21px] h-[21px]"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"
+            ></path>
+          </svg>
+          <span>English</span>
+        </a>
+      </div>
+      <div
+        class="footer__nav bg-[#1D1D1D] py-[38px] px-[80px] flex justify-between max-2xl:flex-wrap max-2xl:gap-y-10 max-lg:gap-y-10 max-sm:justify-center max-sm:p-[30px]"
+      >
+        <div class="column w-[396px]">
+          <h5 class="text-[21px] uppercase font-medium font-oswald text-white">
+            Explore
+          </h5>
+          <div class="border border-b-[#353535] mb-4 mt-4"></div>
+          <ul
+            class="footer__menu text-xs font-montserrat text-[#b3b3b3] grid grid-cols-2 gap-x-10 gap-y-2"
+          >
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Home</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Games</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Creations & Mods</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#"> Community</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">News</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Studios</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Playtest</a>
+            </li>
+          </ul>
+        </div>
+        <div class="column w-[396px]">
+          <h5 class="text-[21px] uppercase font-medium font-oswald text-white">
+            Support
+          </h5>
+          <div class="border border-b-[#353535] mb-4 mt-4"></div>
+          <ul
+            class="footer__menu text-xs font-montserrat text-[#b3b3b3] grid grid-cols-2 gap-x-10 gap-y-2"
+          >
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Support Center</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Status</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Manuals and Safety Docs</a>
+            </li>
+          </ul>
+        </div>
+        <div class="column w-[396px]">
+          <h5 class="text-[21px] uppercase font-medium font-oswald text-white">
+            Legal
+          </h5>
+          <div class="border border-b-[#b3b3b3] mb-4 mt-4"></div>
+          <ul
+            class="footer__menu text-xs font-montserrat text-[#b3b3b3] grid grid-cols-2 gap-x-10 gap-y-2"
+          >
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Terms of Service</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">End User License Agreements</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Do Not Sell or Share My Personal Info</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Legal Information</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Cookie Policy</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Code of Conduct</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Contact</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Corporate</a>
+            </li>
+            <li class="footer__menu-item hover:text-white">
+              <a href="#">Careers</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="footer_license bg-[#1D1D1D] py-[30px] px-[83px] max-sm:p-[30px]"
+      >
+        <div
+          class="logoAndLicense flex h-[120px] items-center justify-between mb-8"
+        >
+          <div class="logo">
+            <a href="#">
+              <svg
+                class="w-[125px]"
+                viewBox="0 0 316.5 47.07"
+                aria-label="Bethesda Logo"
+                style="fill: white"
+              >
+                <g>
+                  <path
+                    d="M0,20.16h19.77V0H0v20.16ZM6.96,7.1h5.84v5.96h-5.84v-5.96Z"
+                  ></path>
+                  <path
+                    d="M61.9,20.67c3.43-1.87,5.69-4.4,5.69-9.05S65.01.05,52.85.05h-25.29v46.17h26.19c8.15,0,16.17-4.79,16.17-14.04,0-6.79-3.88-10.09-8.02-11.51ZM41.78,11.04h7.5c2.91,0,4.85.84,4.85,3.17,0,2.97-1.87,3.82-4.85,3.82h-7.5v-6.99h0ZM50.13,35.23h-8.35v-8.61h8.93c3.36,0,4.98,1.48,4.98,4.21,0,3.55-2.58,4.4-5.56,4.4Z"
+                  ></path>
+                  <path
+                    d="M124.11,2.44h-12.8v10.22h-5.69v7.6c-2.83-5.47-8.22-8.44-16.63-8.44-10.61,0-17.72,7.96-17.72,17.72,0,11.19,8.09,17.53,18.82,17.53,7.62,0,14.68-3.36,17.26-10.61h-11.96c-1.04,1.62-3.3,2.39-5.37,2.39-4,0-6.2-2.72-6.53-6.53h24.57c0-4.68-.75-8.62-2.31-11.77h5.56v16.04c0,9.18,6.02,10.02,11.45,10.02,2.71,0,5.63-.39,8.21-.39v-9.71c-.97.14-1.94.2-2.91.2-3.23,0-3.95-1.36-3.95-4.46v-11.71h6.86v-7.89h-6.86V2.43h0ZM83.55,25.65c.59-3.62,2.78-5.62,6.6-5.62,3.3,0,5.62,2.52,5.62,5.62h-12.23,0Z"
+                  ></path>
+                  <path
+                    d="M156.5,11.81c-5.43,0-8.28,1.88-10.48,4.46h-.12V.04h-12.8v46.17h12.8v-17.72c0-5.37,2.91-6.47,5.11-6.47,3.75,0,4.2,2.72,4.2,6.6v17.59h12.81v-23.03c0-7.7-5.5-11.38-11.52-11.38h0Z"
+                  ></path>
+                  <path
+                    d="M188.06,38.85c-4,0-6.21-2.72-6.53-6.53h24.57c0-13.06-5.75-20.5-19.08-20.5-10.61,0-17.72,7.96-17.72,17.72,0,11.19,8.09,17.53,18.83,17.53,7.62,0,14.68-3.98,17.26-11.22h-11.96c-1.03,1.62-3.3,3-5.37,3h0ZM188.2,20.03c3.3,0,5.62,2.52,5.62,5.62h-12.22c.58-3.62,2.79-5.62,6.6-5.62Z"
+                  ></path>
+                  <path
+                    d="M231.22,25.85c-4.27-1.42-9.12-1.68-11.25-2.59-.71-.32-1.48-.77-1.48-1.75,0-2.2,2.07-2.58,3.88-2.58,1.04,0,2.07.32,2.84.97.85.58,1.43,1.42,1.5,2.52h11.63c-.32-8.6-9.05-10.61-16.29-10.61-6.73,0-15.85,2.2-15.85,10.67,0,5.75,3.95,8.86,13.71,10.54,5.95,1.04,7.05,1.62,7.05,3.56s-2.65,2.59-4.33,2.59c-1.55,0-2.78-.39-3.43-.97-.97-.84-1.48-1.19-1.55-2.36h-12.23c.19,8.67,8.86,11.22,16.74,11.22s17.08-2.52,17.08-11.84c0-5.5-3.75-8.02-8.02-9.38h0Z"
+                  ></path>
+                  <path
+                    d="M263.29,16.34h-.13c-1.94-2.85-5.37-4.53-9.18-4.53-11.25,0-14.29,9.57-14.29,17.46,0,8.41,4.59,17.79,14.1,17.79,6.27,0,8.21-2.39,9.83-4.54h.13v3.69h12.35V.04h-12.8v16.29h-.01ZM258.12,37.75c-4.59,0-5.63-4.34-5.63-8.34s1.04-8.28,5.63-8.28,5.62,4.34,5.62,8.28-1.04,8.34-5.62,8.34Z"
+                  ></path>
+                  <path
+                    d="M312.19,24.94c0-6.46.12-13.13-15.92-13.13-7.95,0-16.88,1.55-17.26,10.99h11.89c.07-1.42.85-3.43,4.79-3.43,2.08,0,4.21.84,4.21,3.11,0,2.14-1.75,2.65-3.49,2.98-6.54,1.23-18.95.84-18.95,11.45,0,7.05,5.36,10.15,11.83,10.15,4.14,0,8.08-.91,10.8-4.01h.13c-.07.91.12,2.27.45,3.17h13.06c-1.43-2.13-1.55-4.98-1.55-7.5v-13.77h.01ZM299.9,34.26c-.2,3.49-2.45,5.23-5.37,5.23-2.32,0-4.01-1.55-4.01-3.09,0-2.27,1.49-2.98,4.33-3.62,1.75-.39,3.5-.84,5.05-1.62v3.11h0Z"
+                  ></path>
+                  <g>
+                    <path
+                      d="M309.19,4.46h-1.55v-.52h3.71v.52h-1.55v4.12h-.62v-4.12h0Z"
+                    ></path>
+                    <path
+                      d="M311.88,3.94h.85l1.46,3.9,1.47-3.9h.84v4.64h-.58v-3.86h-.01l-1.45,3.86h-.53l-1.45-3.86h-.01v3.86h-.59V3.94h0Z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="license flex gap-x-3">
+            <a href="https://www.esrb.org/EPCConfirm/918/">
+              <img src="./img/icons/privacy_certified_globe_color.gif" alt="" />
+            </a>
+            <a href="#" class="flex cursor-default gap-x-2">
+              <img
+                src="./img/icons/M-certified.png"
+                alt=""
+                class="w-[76px] h-[102px]"
+              />
+              <div
+                class="certified_text text-white cursor-text text-xs font-montserrat font-semibold"
+              >
+                <div>Blood and Gore</div>
+                <div>Intense Violence</div>
+                <div>Strong Language</div>
+                <div class="border border-white my-1"></div>
+                <div>Users Interact</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="Legal_Notice text-[#b3b3b3] text-xs font-montserrat font-semibold"
+        >
+          © 2025 Bethesda Softworks LLC, a ZeniMax Media company. Bethesda,
+          Bethesda Softworks, ZeniMax and related logos are registered
+          trademarks or trademarks of ZeniMax Media Inc. in the U.S. and/or
+          other countries. DOOM Eternal, id, id Software and related logos are
+          registered trademarks or trademarks of id Software LLC in the U.S.
+          and/or other countries. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  </body>
+</html>

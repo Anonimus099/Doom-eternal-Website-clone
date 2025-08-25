@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bethesda.net | Sign In | Clone</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <script defer src="./js/SignIN.js"></script>
+    <link
+      rel="icon"
+      href="./img/favicon/DOOM-faviron.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main
+      class="bg-[url('/img/pictures/bethesda-blue-bg.jpg')] bg-cover bg-no-repeat min-h-screen flex items-center justify-center px-4 py-16"
+    >
+      <div
+        class="w-full max-w-md bg-black/70 text-white rounded-sm p-6 shadow-lg"
+      >
+        <h2 class="font-orbitron text-2xl mb-4 uppercase text-center">
+          Sign In
+        </h2>
+        <form id="signinForm" class="space-y-4">
+          <div>
+            <label for="signinEmail" class="block text-sm mb-1">Email</label>
+            <input
+              id="signinEmail"
+              type="email"
+              placeholder="Enter your email"
+              required
+              class="w-full bg-zinc-900 text-white px-3 py-2 rounded-sm outline-none focus:ring-2 focus:ring-zinc-500"
+            />
+          </div>
+          <div>
+            <label for="signinPassword" class="block text-sm mb-1"
+              >Password</label
+            >
+            <input
+              id="signinPassword"
+              type="password"
+              required
+              placeholder="Enter your password"
+              class="w-full bg-zinc-900 text-white px-3 py-2 rounded-sm outline-none focus:ring-2 focus:ring-zinc-500"
+            />
+          </div>
+          <p id="signinError" class="text-red-400 text-sm min-h-[20px]"></p>
+          <button
+            type="submit"
+            class="w-full bg-[#193285] hover:opacity-90 text-white font-orbitron uppercase py-2 rounded-sm"
+          >
+            Sign In
+          </button>
+        </form>
+        <p class="text-sm mt-4 text-center opacity-80 text-white">
+          No account? <a href="./SignUP.html" class="underline">Create one</a>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
