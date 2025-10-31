@@ -1,6 +1,6 @@
 # Проект: Doom Eternal | Clone
 
-#Продакшен: https://anonimus099.github.io/Doom-eternal-Website-clone/
+#Демо: https://anonimus099.github.io/Doom-eternal-Website-clone/
 
 ## 🛠️ Технологии
 
