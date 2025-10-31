@@ -1,4 +1,4 @@
-# Проект: Панель пользователя
+# Проект: Doom Eternal | Clone
 
 #Продакшен: https://anonimus099.github.io/Doom-eternal-Website-clone/
 
