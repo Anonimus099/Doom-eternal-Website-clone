@@ -377,6 +377,11 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-opensans: 'OpenSans', sans-serif;
+    --font-orbitron: 'Orbitron', sans-serif;
+    --font-oswald: 'Oswald', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
   }
 }
 @layer base {
@@ -1800,6 +1805,9 @@
   .bg-\[\#007EAD\] {
     background-color: #007EAD;
   }
+  .bg-\[\#9f1700\] {
+    background-color: #9f1700;
+  }
   .bg-\[\#00000033\] {
     background-color: #00000033;
   }
@@ -1808,9 +1816,6 @@
   }
   .bg-\[\#0E7A0D\] {
     background-color: #0E7A0D;
-  }
-  .bg-\[\#9f1700\] {
-    background-color: #9f1700;
   }
   .bg-\[\#762C20\] {
     background-color: #762C20;
@@ -1884,59 +1889,20 @@
     --tw-gradient-position: in oklab;
     background-image: radial-gradient(var(--tw-gradient-stops));
   }
-  .bg-\[url\(\'\'\)\] {
-    background-image: url('');
+  .bg-\[url\(\'\.\.\/img\/bg\/doom-eternal-bg-change\.jpg\'\)\] {
+    background-image: url('../img/bg/doom-eternal-bg-change.jpg');
   }
-  .bg-\[url\(\'\.\/img\/bg\/doom-eternal-section-bg\.webp\'\)\] {
-    background-image: url('./img/bg/doom-eternal-section-bg.webp');
+  .bg-\[url\(\'\.\.\/img\/bg\/doom-eternal-section-bg\.webp\'\)\] {
+    background-image: url('../img/bg/doom-eternal-section-bg.webp');
+  }
+  .bg-\[url\(\'\.\.\/img\/bg\/doom_eternal_bg_mini\.webp\'\)\] {
+    background-image: url('../img/bg/doom_eternal_bg_mini.webp');
   }
   .bg-\[url\(\'\.\/img\/pictures\/bethesda-blue-bg\.jpg\'\)\] {
     background-image: url('./img/pictures/bethesda-blue-bg.jpg');
   }
-  .bg-\[url\(\'\/\'\)\] {
-    background-image: url('/');
-  }
-  .bg-\[url\(\'\/img\/\'\)\] {
-    background-image: url('/img/');
-  }
-  .bg-\[url\(\'\/img\/bg\/\'\)\] {
-    background-image: url('/img/bg/');
-  }
-  .bg-\[url\(\'\/img\/bg\/doom-eternal-bg-change\.jpg\'\)\] {
-    background-image: url('/img/bg/doom-eternal-bg-change.jpg');
-  }
-  .bg-\[url\(\'\/img\/bg\/doom-eternal-section-bg\.webp\'\)\] {
-    background-image: url('/img/bg/doom-eternal-section-bg.webp');
-  }
-  .bg-\[url\(\'\/img\/bg\/doom_eternal_bg_mini\.webp\'\)\] {
-    background-image: url('/img/bg/doom_eternal_bg_mini.webp');
-  }
-  .bg-\[url\(\'\/img\/pictures\/\'\)\] {
-    background-image: url('/img/pictures/');
-  }
   .bg-\[url\(\'\/img\/pictures\/bethesda-blue-bg\.jpg\'\)\] {
     background-image: url('/img/pictures/bethesda-blue-bg.jpg');
-  }
-  .bg-\[url\(\'im\'\)\] {
-    background-image: url('im');
-  }
-  .bg-\[url\(\'img\'\)\] {
-    background-image: url('img');
-  }
-  .bg-\[url\(\'img\/\'\)\] {
-    background-image: url('img/');
-  }
-  .bg-\[url\(\'img\/bg\/\'\)\] {
-    background-image: url('img/bg/');
-  }
-  .bg-\[url\(\'img\/bg\/doom-eternal-bg-change\.jpg\'\)\] {
-    background-image: url('img/bg/doom-eternal-bg-change.jpg');
-  }
-  .bg-\[url\(\'img\/bg\/doom_eternal_bg_mini\.webp\'\)\] {
-    background-image: url('img/bg/doom_eternal_bg_mini.webp');
-  }
-  .bg-\[url\(\'img\/pictures\/bethesda-blue-bg\.jpg\'\)\] {
-    background-image: url('img/pictures/bethesda-blue-bg.jpg');
   }
   .bg-none {
     background-image: none;
@@ -2158,8 +2124,8 @@
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
-  .py-\[38px\] {
-    padding-block: 38px;
+  .py-\[30px\] {
+    padding-block: 30px;
   }
   .py-\[100px\] {
     padding-block: 100px;
@@ -2167,8 +2133,8 @@
   .py-\[10px\] {
     padding-block: 10px;
   }
-  .py-\[30px\] {
-    padding-block: 30px;
+  .py-\[38px\] {
+    padding-block: 38px;
   }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
@@ -2227,6 +2193,24 @@
   .align-top {
     vertical-align: top;
   }
+  .font-\[\'Orbitron\'\,_sans-serif\] {
+    font-family: 'Orbitron', sans-serif;
+  }
+  .font-montserrat {
+    font-family: var(--font-montserrat);
+  }
+  .font-opensans {
+    font-family: var(--font-opensans);
+  }
+  .font-orbitron {
+    font-family: var(--font-orbitron);
+  }
+  .font-oswald {
+    font-family: var(--font-oswald);
+  }
+  .font-roboto {
+    font-family: var(--font-roboto);
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -2282,6 +2266,10 @@
   .leading-relaxed {
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
+  }
+  .\!font-bold {
+    --tw-font-weight: var(--font-weight-bold) !important;
+    font-weight: var(--font-weight-bold) !important;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -2362,6 +2350,12 @@
   }
   .whitespace-pre-wrap {
     white-space: pre-wrap;
+  }
+  .\!text-black {
+    color: var(--color-black) !important;
+  }
+  .\!text-gray-800 {
+    color: var(--color-gray-800) !important;
   }
   .\[color\:red\] {
     color: red;
@@ -3183,39 +3177,9 @@
       gap: calc(var(--spacing) * 4);
     }
   }
-  .md\:bg-\[url\(\'\'\)\] {
+  .md\:bg-\[url\(\'\.\.\/img\/bg\/doom_eternal_bg\.webp\'\)\] {
     @media (width >= 48rem) {
-      background-image: url('');
-    }
-  }
-  .md\:bg-\[url\(\'\/\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('/');
-    }
-  }
-  .md\:bg-\[url\(\'\/img\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('/img');
-    }
-  }
-  .md\:bg-\[url\(\'\/img\/\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('/img/');
-    }
-  }
-  .md\:bg-\[url\(\'\/img\/bg\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('/img/bg');
-    }
-  }
-  .md\:bg-\[url\(\'\/img\/bg\/doom_eternal_bg\.webp\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('/img/bg/doom_eternal_bg.webp');
-    }
-  }
-  .md\:bg-\[url\(\'img\/bg\/doom_eternal_bg\.webp\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('img/bg/doom_eternal_bg.webp');
+      background-image: url('../img/bg/doom_eternal_bg.webp');
     }
   }
   .md\:px-12 {

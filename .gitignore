@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# env
+.env
+.env.*
+
+# build outputs (keep src/output.css for site)
+dist/
+.build/
+.tmp/
+.cache/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

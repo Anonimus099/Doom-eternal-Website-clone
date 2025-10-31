@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-opensans: 'OpenSans', sans-serif;
+  --font-orbitron: 'Orbitron', sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+}
+
 /* Подключение локальных шрифтов */
 @font-face {
   font-family: 'Montserrat';
