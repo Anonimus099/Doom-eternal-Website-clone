@@ -1,7 +1,5 @@
 Project: Doom Eternal | Clone
 
-🔗 Demo: https://anonimus099.github.io/Doom-eternal-Website-clone/
-
 🛠️ Tech Stack
 
 HTML5 – structured page layout
