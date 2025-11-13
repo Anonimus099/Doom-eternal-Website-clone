@@ -1,69 +1,68 @@
-# Проект: Doom Eternal | Clone
+Project: Doom Eternal | Clone
 
-#Демо: https://anonimus099.github.io/Doom-eternal-Website-clone/
+🔗 Demo: https://anonimus099.github.io/Doom-eternal-Website-clone/
 
-## 🛠️ Технологии
+🛠️ Tech Stack
 
-- HTML5 – структура страниц
-- CSS3 / TailwindCSS v4.1 – стилизация и адаптивный дизайн
-- JavaScript (ES6+) – логика приложения
-- LocalStorage – хранение данных пользователей
-- Responsive Design – оптимизация под мобильные устройства
+HTML5 – structured page layout
+CSS3 / TailwindCSS v4.1 – immersive styling & responsive design
+JavaScript (ES6+) – core logic & interactive features
+LocalStorage – storing user data safely
+Responsive Design – optimized for terminals… I mean, mobile devices
 
-## 📋 Требования к паролю
+📋 Password Vault Protocol
 
-При регистрации пароль должен содержать:
+All new recruits must comply with password security regulations:
+At least 8 characters long
+Minimum 1 uppercase letter
+Minimum 1 lowercase letter
+Minimum 1 digit
+Minimum 1 special symbol (!@#$%^&*(),.?":{}|<>)
+Failure to comply will result in denial of access.
 
-- Минимум 8 символов
-- Хотя бы 1 заглавную букву
-- Хотя бы 1 строчную букву
-- Хотя бы 1 цифру
-- Хотя бы 1 спецсимвол (!@#$%^&\*(),.?":{}|<>)
+🔐 Security Measures
 
-## 🔐 Безопасность
+Input validation for every field
+Email uniqueness verification
+Empty field protection (you cannot leave a vault door open!)
+Proper email format enforcement
+Registration timestamp recorded for all personnel
 
-- Валидация всех вводимых данных
-- Проверка уникальности email
-- Защита от пустых полей
-- Проверка формата email
-- Сохранение времени регистрации
+🎨 Visual Design
 
-## 🎨 Особенности дизайна
+Dark theme inspired by the Doom Eternal universe
+Smooth animations & transitions
+Color palette faithful to the original game
+Fully mobile-optimized, because wastelands are everywhere
 
-- Темный стиль в духе Doom Eternal
-- Анимации и плавные переходы
-- Цветовая схема из оригинальной игры
-- Адаптивность для мобильных устройств
+🚀 Getting Started
 
-## 🚀 Запуск проекта
+Download all project files
+Open index.html in your preferred browser
+Admin panel testing? Open admin.html
 
-1. Скачайте все файлы проекта
-2. Откройте `index.html` в браузере
-3. Для тестирования панели администратора откройте `admin.html`
+📱 Supported Browsers
 
-## 📱 Поддерживаемые браузеры
+Chrome – recommended
+Firefox
+Edge
+Safari
 
-- Chrome (рекомендуется)
-- Firefox
-- Edge
-- Safari
+🔧 How to Use
+➕ Register New Account
 
-## 🔧 Использование
+Navigate to signup.html
+Fill out all mandatory fields
+Click Create Account
 
-### ➕ Регистрация
+🔑 Sign In
 
-1. Перейдите на `signup.html`
-2. Заполните все поля
-3. Нажмите **Create account**
+Navigate to signin.html
+Enter your email and password
+Click Sign In
 
-### 🔑 Вход
+👤 Access Your Profile
 
-1. Перейдите на `signin.html`
-2. Введите email и пароль
-3. Нажмите **Sign in**
-
-### 👤 Профиль
-
-1. Авторизуйтесь
-2. Перейдите на `profile.html`
-3. Просматривайте свои данные
+Log in successfully
+Open profile.html
+View your account stats and data
